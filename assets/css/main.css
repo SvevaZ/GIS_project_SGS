@@ -28,6 +28,14 @@ z-index: 3; /* più alto del before */
 position: relative;
 margin: 0 2rem
 }
+
+.center-cols {
+  display: flex;
+  justify-content: center;
+  gap: 2rem; /* opzionale, per distanziare le colonne */
+  flex-wrap: wrap;
+}
+
 /*loro*/
 
 html, body, div, span, applet, object,
