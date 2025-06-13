@@ -38,8 +38,11 @@
 			<div class="container">
 				<section>
 				<h3><b>Aim</b></h3>
-				<p>This page explains how we combined Air quality data with land cover data to obtain some graph and statistics showing a correlation between the concentration of the polliutants and the land cover class.
-					Land cover data are provided by the website.. under the licence…
+				<p>
+					The aim of the following analysis is to investigate the relationship between land cover and the concentration of each of the three pollutants over France. To better highlight the correlation we will present the results using some statistics and graphs. <br />We are particularly interested in the urban areas, and we want to compare the concentration of the pollutants in urban areas with the concentration in other land cover classes such as agriculture, grassland and forest.
+					<br />
+					We will use land cover data from <a href="https://cds.climate.copernicus.eu/datasets/satellite-land-cover?tab=overview">ESA CCI Land Cover</a>, with a resolution of 300m, under the <a href="https://object-store.os-api.cci2.ecmwf.int/cci2-prod-catalogue/licences/satellite-land-cover/satellite-land-cover_8423d13d3dfd95bbeca92d9355516f21de90d9b40083a915ead15a189d6120fa.pdf">ESA CCI Land Cover licence</a>.
+
 				</p>
 				</section>
 			</div>
@@ -49,63 +52,72 @@
 			<div class="container">
 				<h3><b>Processing</b></h3>
 				<div class="row gtr-150">
-					<div class="col-8 col-12-medium">
+					<div class="col-7 col-12-medium">
 						<h4>Download of land cover data</h4>
-						<p>We started by downloading the data from the website, we were interested in …</p>
+						<p>We started by downloading the data from <a href="https://cds.climate.copernicus.eu/datasets/satellite-land-cover?tab=overview">ESA CCI Land Cover</a>, we were interested in the data of 2022 for the whole extent of France.
+						<br />
+						In this dataset land surface is divided into 22 classes, which have been defined using the United Nations Food and Agriculture Organization’s (UN FAO) Land Cover Classification System (LCCS).
+						</p>
 					</div>
-					<div class="col-4 col-12-medium imp-medium">
-						<span class="image fit"><img src="images/pic01.jpg" alt="" /></span>
+					<div class="col-5 col-12-medium imp-medium">
+						<span class="image fit"><img src="../images/Land Cover/Land cover classes.png" alt="" /></span>
 					</div>
 				</div>
-				<div class="row gtr-150">
-					<div class="col-4 col-12-medium imp-medium">
-						<span class="image fit"><img src="images/pic01.jpg" alt="" /></span>
+				<div class="row gtr-150" style="align-items: center">
+					<div class="col-5 col-12-medium imp-medium">
+						<span class="image fit"><img src="../images/Land Cover/Reclassified_6_classes.png" alt="" /></span>
 					</div>
-					<div class="col-8 col-12-medium">
+					<div class="col-7 col-12-medium">
 						<h4>Reclassification in 6 classes</h4>
-						<p>We started by downloading the data from the website, we were interested in …</p>
+						<p>Since the original dataset contains 22 classes, we decided to reclassify it into 6 broader classes to simplify the analysis.</p>
+					<div class="table-wrapper">
+						<table class="alt">
+							<thead>
+								<tr>
+									<th>New Classes</th>
+									<th>Old Classes</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>Agriculture</td>
+									<td>10, 11, 12, 20, 30, 40</td>
+
+								</tr>
+								<tr>
+									<td>Forest</td>
+									<td>50, 60, 61, 62, 70, 71, 72, 80, 81, 82, 90, 100, 160, 170</td>
+								</tr>
+								<tr>
+									<td>Grassland</td>
+									<td>110, 130</td>
+								</tr>
+								<tr>
+									<td>Wetland</td>
+									<td>180</td>
+								</tr>
+								<tr>
+									<td>Settlement</td>
+									<td>190</td>
+								</tr>
+								<tr>
+									<td>Other</td>
+									<td>120, 121, 122, 140, 150, 151, 152, 153, 200, 201, 202, 210, 220</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
 					</div>
 				</div>
-				<div class="table-wrapper">
-					<table class="alt">
-						<thead>
-							<tr>
-								<th>Old Classes</th>
-								<th>New classes</th>
-							</tr>
-						</thead>
-						<tbody>
-							<tr>
-								<td>Item One</td>
-								<td>Ante turpis integer aliquet porttitor.</td>
-
-							</tr>
-							<tr>
-								<td>Item Two</td>
-								<td>Vis ac commodo adipiscing arcu aliquet.</td>
-							</tr>
-							<tr>
-								<td>Item Three</td>
-								<td> Morbi faucibus arcu accumsan lorem.</td>
-							</tr>
-							<tr>
-								<td>Item Four</td>
-								<td>Vitae integer tempus condimentum.</td>
-							</tr>
-							<tr>
-								<td>Item Five</td>
-								<td>Ante turpis integer aliquet porttitor.</td>
-							</tr>
-						</tbody>
-						<tfoot>
-							<tr>
-								<td colspan="2"></td>
-							</tr>
-						</tfoot>
-					</table>
-				</div>
+				
+				
 				<h4>Link to the CAM data and resampling</h4>
-				<p>We started by downloading the data from the website, we were interested in …</p>
+				<p>Once we reclassified the land cover data, we need to combine them with air quality data. 
+					We used the annual average concentration for each pollutant from 2013 to 2022 that we obtained in the Pollutant page  <br/></p>
+					<ul class="actions special">
+								<li><a href="#" class="button">See how we obtained the yearly average (DA SISTEMARE LINK)</a></li>
+							</ul>
+				<p>Since the land cover data has a resolution of 300 m and air quality data has a resolution of 1 km, we resampled air quality data to match the resolution of land cover. </p>
 				<div class="row gtr-150 center-cols">
 					<div class="col-3 col-12-medium imp-medium ">
 						<p>pre</p>
