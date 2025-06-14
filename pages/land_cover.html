@@ -117,35 +117,37 @@
 					<ul class="actions special">
 								<li><a href="#" class="button">See how we obtained the yearly average (DA SISTEMARE LINK)</a></li>
 							</ul>
-				<p>Since the land cover data has a resolution of 300 m and air quality data has a resolution of 1 km, we resampled air quality data to match the resolution of land cover. </p>
-				<div class="row gtr-150 center-cols">
+				<p>Since the land cover data has a resolution of 300 m and air quality data has a resolution of 10 km, we resampled air quality data to match the resolution of land cover. </p>
+				<div class="row gtr-150 center-cols align-center">
 					<div class="col-3 col-12-medium imp-medium ">
-						<p>pre</p>
-						<span class="image fit "><img src="images/pic01.jpg" alt="" /></span>
+						<p>Pre resampling</p>
+						<span class="image fit "><img src="../images/Land Cover/10 km pixel size.png" alt="" /></span>
 					</div>
 					<div class="col-3 col-12-medium imp-medium">
-						<p>post</p>
-						<span class="image fit"><img src="images/pic01.jpg" alt="" /></span>
+						<p>Post resampling</p>
+						<span class="image fit"><img src="../images/Land Cover/300 m pixel size.png" alt="" /></span>
 					</div>
 				</div>
 				<h4>Conversion of land cover to vectors and for each computation of zonal statistics</h4>
-				<p>We started by downloading the data from the website, we were interested in …</p>
-				<div class="row gtr-150">
+				<p>For each pollutant we wanted to compute the minimum, maximum and mean value of the concentration of the pollutant over some specific land cover classes. We were particularly interested in comparing Settlement, Agriculture, Grassland and Forest.
+					For doing so, we converted the land cover raster data to vector data and then we computed the zonal statistics for each land cover class. We repeated this for each year from 2013 to 2022, but for simplicity for all of these we used the classification map of 2022.
+				</p>
+				<div class="row gtr-150 align-center">
 					<div class="col-3 col-12-medium imp-medium">
-						<p>Urban</p>
-						<span class="image fit "><img src="images/pic01.jpg" alt="" /></span>
+						<p>Settlement</p>
+						<span class="image fit "><img src="../images/Land Cover/urban.png" alt="" /></span>
 					</div>
 					<div class="col-3 col-12-medium imp-medium">
 						<p>Agriculture</p>
-						<span class="image fit"><img src="images/pic01.jpg" alt="" /></span>
+						<span class="image fit"><img src="../images/Land Cover/agriculture.png" alt="" /></span>
 					</div>
 					<div class="col-3 col-12-medium imp-medium">
 						<p>Grassland</p>
-						<span class="image fit"><img src="images/pic01.jpg" alt="" /></span>
+						<span class="image fit"><img src="../images/Land Cover/grassland.png" alt="" /></span>
 					</div>
 					<div class="col-3 col-12-medium imp-medium">
 						<p>Forest</p>
-						<span class="image fit"><img src="images/pic01.jpg" alt="" /></span>
+						<span class="image fit"><img src="../images/Land Cover/forest.png" alt="" /></span>
 					</div>
 				</div>
 			</div>
@@ -156,21 +158,22 @@
 			<div class="container">
 				<section>
 				<h3><b>Results</b></h3>
+				<p>Here is the minimum, maximum and mean value of the concentration of each pollutant over the Settlement class for the year 2022.</p>
 				<div class="row gtr-150">
 					<div class="col-4 col-12-medium imp-medium">
-						<p>Urban NO2</p>
+						<p>Settlement NO2</p>
 						<span class="image fit "><img src="images/pic01.jpg" alt="" /></span>
 					</div>
 					<div class="col-4 col-12-medium imp-medium">
-						<p>Urban PM 2.5</p>
+						<p>Settlement PM 2.5</p>
 						<span class="image fit"><img src="images/pic01.jpg" alt="" /></span>
 					</div>
 					<div class="col-4 col-12-medium imp-medium">
-						<p>Urban PM 10</p>
+						<p>Settlement PM 10</p>
 						<span class="image fit"><img src="images/pic01.jpg" alt="" /></span>
 					</div>
 				</div>
-				<p>Moreover we can see that the trend is significantly higher for urban wrt other land cover classes</p>
+				<p>As previously said, we were particularly interested in comparing the Settlement class with other land cover classes. Here are the histograms of the mean concentration for the 4 main land cover classes over time for each of the 3 pollutants.</p>
 				<div class="row gtr-150">
 					<div class="col-4 col-12-medium imp-medium">
 						<p>Comparison NO2</p>
@@ -185,8 +188,22 @@
 						<span class="image fit"><img src="images/pic01.jpg" alt="" /></span>
 					</div>
 				</div>
+				<p>We can clearly see that the mean concentration of each of the 3 is much higher in the settlement class</p>
 				</section>
 			</div>
+		</section>
+<!-- Footer -->
+		<section id="footer">
+			<ul class="icons">
+				<li><a href="#" class="icon brands alt fa-twitter"><span class="label">Twitter</span></a></li>
+				<li><a href="#" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>
+				<li><a href="#" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
+				<li><a href="#" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+				<li><a href="#" class="icon solid alt fa-envelope"><span class="label">Email</span></a></li>
+			</ul>
+			<ul class="copyright">
+				<li>&copy; Untitled</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+			</ul>
 		</section>
 	</body>
 </html>
