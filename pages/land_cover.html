@@ -33,11 +33,11 @@
 <!-- Aim -->
 		<section id="one" class="main style1">
 			<header class="major special">
-				<h2>Land cover</h2>
+				<h1>Land cover</h1>
 			</header>
 			<div class="container">
 				<section>
-				<h3><b>Aim</b></h3>
+				<h2><b>Aim</b></h2>
 				<p>
 					The aim of the following analysis is to investigate the relationship between land cover and the concentration of each of the three pollutants over France. To better highlight the correlation we will present the results using some statistics and graphs. <br />We are particularly interested in the urban areas, and we want to compare the concentration of the pollutants in urban areas with the concentration in other land cover classes such as agriculture, grassland and forest.
 					<br />
@@ -50,10 +50,10 @@
 <!-- Processing -->
  		<section>
 			<div class="container">
-				<h3><b>Processing</b></h3>
+				<h2><b>Processing</b></h2>
 				<div class="row gtr-150">
 					<div class="col-7 col-12-medium">
-						<h4>Download of land cover data</h4>
+						<h3>Download of land cover data</h3>
 						<p>We started by downloading the data from <a href="https://cds.climate.copernicus.eu/datasets/satellite-land-cover?tab=overview">ESA CCI Land Cover</a>, we were interested in the data of 2022 for the whole extent of France.
 						<br />
 						In this dataset land surface is divided into 22 classes, which have been defined using the United Nations Food and Agriculture Organization’s (UN FAO) Land Cover Classification System (LCCS).
@@ -68,7 +68,7 @@
 						<span class="image fit"><img src="../images/Land Cover/Reclassified_6_classes.png" alt="" /></span>
 					</div>
 					<div class="col-7 col-12-medium">
-						<h4>Reclassification in 6 classes</h4>
+						<h3>Reclassification in 6 classes</h3>
 						<p>Since the original dataset contains 22 classes, we decided to reclassify it into 6 broader classes to simplify the analysis.</p>
 					<div class="table-wrapper">
 						<table class="alt">
@@ -109,9 +109,7 @@
 					</div>
 					</div>
 				</div>
-				
-				
-				<h4>CAM data and resampling</h4>
+				<h3>CAM data and resampling</h3>
 				<p>Once we reclassified the land cover data, we need to combine them with air quality data. 
 					We used the annual average concentration for each pollutant from 2013 to 2022 that we obtained in the Pollutant page  <br/></p>
 					<ul class="actions special">
@@ -128,7 +126,7 @@
 						<span class="image fit"><img src="../images/Land Cover/300 m pixel size.png" alt="" /></span>
 					</div>
 				</div>
-				<h4>Conversion of land cover to vectors and for each computation of zonal statistics</h4>
+				<h3>Conversion of land cover to vectors and for each computation of zonal statistics</h3>
 				<p>For each pollutant we wanted to compute the minimum, maximum and mean value of the concentration of the pollutant over some specific land cover classes. We were particularly interested in comparing Settlement, Agriculture, Grassland and Forest.
 					For doing so, we converted the land cover raster data to vector data and then we computed the zonal statistics for each land cover class. We repeated this for each year from 2013 to 2022, but for simplicity for all of these we used the classification map of 2022.
 				</p>
@@ -157,7 +155,7 @@
  		<section >
 			<div class="container">
 				<section>
-				<h3><b>Results</b></h3>
+				<h2><b>Results</b></h2>
 				<p>Here is the minimum, maximum and mean value of the concentration in µg/m³ of each pollutant over the Settlement class for each year from 2013 to 2022.</p>
 				<div class="row gtr-150 align-center">
 					<div class="col-4 col-12-medium imp-medium">
@@ -181,7 +179,7 @@
 					</div>
 					<div class="col-4 col-12-medium imp-medium">
 						<p>Comparison PM 2.5</p>
-						<span class="image fit"><img src="images/pic01.jpg" alt="" /></span>
+						<span class="image fit"><img src="../images/Land Cover/comparison_land_cover_pm_2_5.png" alt="" /></span>
 					</div>
 					<div class="col-4 col-12-medium imp-medium">
 						<p>Comparison PM 10</p>

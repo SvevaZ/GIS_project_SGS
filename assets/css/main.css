@@ -2077,7 +2077,7 @@ input, select, textarea {
 			width: 6em;
 		}
 
-		header.major h2, header.major h3, header.major h4, header.major h5, header.major h6 {
+		header.major h1, header.major h2, header.major h3, header.major h4, header.major h5, header.major h6 {
 			margin: 0;
 		}
 
