@@ -28,6 +28,14 @@ z-index: 3; /* più alto del before */
 position: relative;
 margin: 0 2rem
 }
+
+.center-cols {
+  display: flex;
+  justify-content: center;
+  gap: 2rem; /* opzionale, per distanziare le colonne */
+  flex-wrap: wrap;
+}
+
 /*loro*/
 
 html, body, div, span, applet, object,
@@ -2069,7 +2077,7 @@ input, select, textarea {
 			width: 6em;
 		}
 
-		header.major h2, header.major h3, header.major h4, header.major h5, header.major h6 {
+		header.major h1, header.major h2, header.major h3, header.major h4, header.major h5, header.major h6 {
 			margin: 0;
 		}
 
