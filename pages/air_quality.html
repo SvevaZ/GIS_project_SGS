@@ -5,46 +5,215 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
 <html>
-	<head>
-		<title>Photon by HTML5 UP</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="../assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="../assets/css/noscript.css" /></noscript>
-		<style>
-		</style>
-	</head>
 
-    <body class="is-preload">
-        <!-- Header -->
-        <header id="header" style="padding-top: 2rem;">
-            <nav>
-                <div class="nav-split">
-                    <div class="nav-left">
-                    <a href="../index.html" class="button scrolly">Home</a>
-                    </div>
-                    <div class="nav-right">
+<head>
+	<title>Photon by HTML5 UP</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="../assets/css/main.css" />
+	<noscript>
+		<link rel="stylesheet" href="../assets/css/noscript.css" />
+	</noscript>
+	<style>
+	</style>
+</head>
+
+<body class="is-preload">
+	<!-- Header -->
+	<header id="header" style="padding-top: 2rem;">
+		<nav>
+			<div class="nav-split">
+				<div class="nav-left">
+					<a href="../index.html" class="button scrolly">Home</a>
+				</div>
+				<div class="nav-right">
 					<a href="../pages/air_quality.html" class="button scrolly">Air Quality</a>
-                    <a href="../pages/land_cover.html" class="button scrolly">Land Cover</a>
+					<a href="../pages/land_cover.html" class="button scrolly">Land Cover</a>
 					<a href="../pages/pop_exposure.html" class="button scrolly">Population Exposure</a>
-                    <a href="../pages/webgis.html" class="button scrolly">Webgis</a>
-                    </div>
-                </div>
-            </nav>
-        </header>
+					<a href="../pages/webgis.html" class="button scrolly">Webgis</a>
+				</div>
+			</div>
+		</nav>
+	</header>
+	<!-- Aim -->
+	<section id="one" class="main style1">
+		<header class="major special">
+			<h1>Air Quality</h1>
+		</header>
+		<div class="container">
+			<section>
+				<h2><b>Aim</b></h2>
+				<p>
+					The aim of this project is to analyze the spatial and temporal patterns of air pollution —
+					specifically NO2, PM2.5, and PM10 — over a selected case study area using CAMS reanalysis data. The
+					analysis is based on monthly and yearly aggregated datasets for the year 2022. Data in NetCDF format
+					are processed and visualized through QGIS by converting them into raster layers using the native
+					mesh layer functionalities. The project culminates in the creation of average concentration maps for
+					each pollutant, which enable the evaluation of air quality trends and the identification of critical
+					areas in relation to current EU air quality standards.
+					<br />
+					We will use land the multi-temporal air quality data (Jan 2013 to Dec 2022) from <a
+						href=https://ads.atmosphere.copernicus.eu/datasets/cams-europe-air-quality-reanalyses?tab=overview>CAMS
+						Reanalysis Data </a>.
 
-<!-- Footer -->
-		<section id="footer">
-			<ul class="icons">
-				<li><a href="#" class="icon brands alt fa-twitter"><span class="label">Twitter</span></a></li>
-				<li><a href="#" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>
-				<li><a href="#" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
-				<li><a href="#" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
-				<li><a href="#" class="icon solid alt fa-envelope"><span class="label">Email</span></a></li>
+				</p>
+			</section>
+		</div>
+	</section>
+	<!-- Processing -->
+	<section>
+		<div class="container">
+			<h2><b>Processing</b></h2>
+			<div class="row gtr-150">
+				<div class="col-7 col-12-medium">
+					<h3>Processing and Visualization of CAMS Air Quality Data Using NetCDF and QGIS</h3>
+					<p>
+						The NetCDF (Network Common Data Form) format is a widely adopted standard in atmospheric and
+						environmental sciences for storing multidimensional scientific datasets, such as time series of
+						pollutant concentrations across spatial grids. It is particularly suitable for handling data
+						from services like CAMS (Copernicus Atmosphere Monitoring Service) due to its efficiency in
+						managing large-scale model outputs and its support for self-describing metadata (e.g., units,
+						variable descriptions), which makes it compatible with various analysis tools including Python
+						(xarray), Panoply, and QGIS.
+					</p>
+				</div>
+				<div class="col-5 col-12-medium imp-medium">
+					<span class="image fit"><img src="../images/Land Cover/Land cover classes.png" alt="" /></span>
+				</div>
+			</div>
+			<div class="row gtr-150" style="align-items: center">
+				<div class="col-5 col-12-medium imp-medium">
+					<span class="image fit"><img src="../images/Land Cover/Reclassified_6_classes.png" alt="" /></span>
+				</div>
+				<div class="col-7 col-12-medium">
+					<p>
+						In the context of the project, CAMS NetCDF files were imported and processed in QGIS as mesh
+						layers, which allow for the visualization and manipulation of time-varying geospatial data.
+						After assigning the EPSG:4326 coordinate reference system, the dataset was explored and
+						processed using tools such as the Mesh Calculator to compute monthly average concentrations of
+						selected pollutants. These aggregated datasets were subsequently exported as GeoTIFF raster
+						files, resulting in a series of average concentration maps. This approach enabled a clear and
+						accessible spatial representation of air pollution levels, serving as a key component of the
+						project’s analytical framework.
+					</p>
+
+				</div>
+			</div>
+			<h3>CAM data and resampling</h3>
+			<p>Once we reclassified the land cover data, we need to combine them with air quality data.
+				We used the annual average concentration for each pollutant from 2013 to 2022 that we obtained in the
+				Pollutant page <br /></p>
+			<ul class="actions special">
+				<li><a href="#" class="button">See how we obtained the yearly average (DA SISTEMARE LINK)</a></li>
 			</ul>
-			<ul class="copyright">
-				<li>&copy; Untitled</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-			</ul>
-		</section>
-	</body>
+			<p>Since the land cover data has a resolution of 300 m and air quality data has a resolution of 10 km, we
+				resampled air quality data to match the resolution of land cover. </p>
+			<div class="row gtr-150 center-cols align-center">
+				<div class="col-3 col-12-medium imp-medium ">
+					<p>Pre resampling ~ 10 km</p>
+					<span class="image fit "><img src="../images/Land Cover/10 km pixel size.png" alt="" /></span>
+				</div>
+				<div class="col-3 col-12-medium imp-medium">
+					<p>Post resampling ~ 300 m</p>
+					<span class="image fit"><img src="../images/Land Cover/300 m pixel size.png" alt="" /></span>
+				</div>
+			</div>
+			<h3>Conversion of land cover to vectors and for each computation of zonal statistics</h3>
+			<p>For each pollutant we wanted to compute the minimum, maximum and mean value of the concentration of the
+				pollutant over some specific land cover classes. We were particularly interested in comparing
+				Settlement, Agriculture, Grassland and Forest.
+				For doing so, we converted the land cover raster data to vector data and then we computed the zonal
+				statistics for each land cover class. We repeated this for each year from 2013 to 2022, but for
+				simplicity for all of these we used the classification map of 2022.
+			</p>
+			<div class="row gtr-150 align-center">
+				<div class="col-3 col-12-medium imp-medium">
+					<p>Settlement</p>
+					<span class="image fit "><img src="../images/Land Cover/urban.png" alt="" /></span>
+				</div>
+				<div class="col-3 col-12-medium imp-medium">
+					<p>Agriculture</p>
+					<span class="image fit"><img src="../images/Land Cover/agriculture.png" alt="" /></span>
+				</div>
+				<div class="col-3 col-12-medium imp-medium">
+					<p>Grassland</p>
+					<span class="image fit"><img src="../images/Land Cover/grassland.png" alt="" /></span>
+				</div>
+				<div class="col-3 col-12-medium imp-medium">
+					<p>Forest</p>
+					<span class="image fit"><img src="../images/Land Cover/forest.png" alt="" /></span>
+				</div>
+			</div>
+		</div>
+
+	</section>
+	<!-- Results -->
+	<section>
+		<div class="container">
+			<section id="one" class="main style1">
+				<h2><b>Results</b></h2>
+				<p>Here is the minimum, maximum and mean value of the concentration in µg/m³ of each pollutant over the
+					Settlement class for each year from 2013 to 2022.</p>
+				<div class="row gtr-150 align-center">
+					<div class="col-4 col-12-medium imp-medium">
+						<p>Settlement NO2</p>
+						<span class="image fit "><img src="../images/Land Cover/settlement no2.png" alt="" /></span>
+					</div>
+					<div class="col-4 col-12-medium imp-medium">
+						<p>Settlement PM 2.5</p>
+						<span class="image fit"><img src="../images/Land Cover/settlement pm2_5.png" alt="" /></span>
+					</div>
+					<div class="col-4 col-12-medium imp-medium">
+						<p>Settlement PM 10</p>
+						<span class="image fit"><img src="../images/Land Cover/settlement pm10.png" alt="" /></span>
+					</div>
+				</div>
+				<p>As previously said, we were particularly interested in comparing the Settlement class with other land
+					cover classes. Here are the histograms of the mean concentration for the 4 main land cover classes
+					over time for each of the 3 pollutants.</p>
+				<div class="row gtr-150 align-center">
+					<div class="col-4 col-12-medium imp-medium">
+						<p>Comparison NO2</p>
+						<span class="image fit "><img src="../images/Land Cover/comparison_land_cover_No2_20.png"
+								alt="" /></span>
+					</div>
+					<div class="col-4 col-12-medium imp-medium">
+						<p>Comparison PM 2.5</p>
+						<span class="image fit"><img src="../images/Land Cover/comparison_land_cover_pm_2_5_20.png"
+								alt="" /></span>
+					</div>
+					<div class="col-4 col-12-medium imp-medium">
+						<p>Comparison PM 10</p>
+						<span class="image fit"><img src="../images/Land Cover/comparison_land_cover_pm_10.png"
+								alt="" /></span>
+					</div>
+				</div>
+				<p>We can clearly see that the mean concentration of each of the 3 is much higher in the settlement
+					class</p>
+			</section>
+		</div>
+		<div class="container">
+			<section>
+				<ul class="actions special">
+					<li><a href="../pages/pop_exposure.html" class="button">Next step: population exposure</a></li>
+				</ul>
+			</section>
+		</div>"
+	</section>
+	<!-- Footer -->
+	<section id="footer">
+		<ul class="icons">
+			<li><a href="#" class="icon brands alt fa-twitter"><span class="label">Twitter</span></a></li>
+			<li><a href="#" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>
+			<li><a href="#" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
+			<li><a href="#" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+			<li><a href="#" class="icon solid alt fa-envelope"><span class="label">Email</span></a></li>
+		</ul>
+		<ul class="copyright">
+			<li>&copy; Untitled</li>
+			<li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+		</ul>
+	</section>
+</body>
+
 </html>
