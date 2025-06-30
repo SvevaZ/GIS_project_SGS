@@ -72,8 +72,7 @@
 						pollutant concentrations across spatial grids. It is particularly suitable for handling data
 						from services like CAMS (Copernicus Atmosphere Monitoring Service) due to its efficiency in
 						managing large-scale model outputs and its support for self-describing metadata (e.g., units,
-						variable descriptions), which makes it compatible with various analysis tools including Python
-						(xarray), Panoply, and QGIS.
+						variable descriptions).
 					</p>
 				</div>
 				<div class="col-5 col-12-medium imp-medium">
@@ -92,8 +91,7 @@
 						processed using tools such as the Mesh Calculator to compute monthly average concentrations of
 						selected pollutants. These aggregated datasets were subsequently exported as GeoTIFF raster
 						files, resulting in a series of average concentration maps. This approach enabled a clear and
-						accessible spatial representation of air pollution levels, serving as a key component of the
-						project’s analytical framework.
+						accessible spatial representation of air pollution levels.
 					</p>
 
 				</div>
@@ -103,18 +101,14 @@
 				<div class="col-5 col-12-medium">
 					<p>
 						Yearly concentration maps are created to represent the annual average levels of air pollutants
-						such as
-						NO₂, PM2.5, and PM10, categorized into standardized classes based on EU air quality guidelines.
+						(NO₂, PM2.5, and PM10) categorized into standardized classes based on EU air quality guidelines.
 						In this
 						project, all processing was performed entirely in QGIS. After generating the yearly average
-						rasters from
-						monthly data, each map was reclassified into five concentration levels using the “Reclassify by
-						Table”
-						tool. This step allows for a clear and consistent visualization of pollution severity across
-						space and
+						rasters from monthly data, each map was reclassified into five concentration levels using the
+						“Reclassify by Table” tool.
+						This step allows for a clear and consistent visualization of pollution severity across space and
 						time. The resulting maps help identify areas with critical pollution levels, support comparison
-						across
-						years, and provide a useful basis for environmental assessment and policy evaluation.
+						across years, and provide a useful basis for environmental assessment and policy evaluation.
 					</p>
 				</div>
 				<div class="col-7 col-12-medium imp-medium">
@@ -170,14 +164,14 @@
 						The "Annual Average Difference from the 5-year Mean" is an indicator that shows how air quality
 						in a specific year deviates from the recent historical average over the past five years. It does
 						this by calculating the difference between the annual average concentration of a pollutant—such
-						as PM2.5, NO₂, or PM10—in a given year and the mean concentration during the preceding five-year
-						period. This measure is particularly useful for highlighting short-term trends or anomalies in
+						in a given year and the mean concentration during the preceding five-years. This measure is
+						particularly useful for highlighting short-term trends or anomalies in
 						air quality, as it can reveal unusual changes that may warrant further investigation. For
 						example, it can help identify the impact of extraordinary events or policies, like lockdowns or
 						new environmental regulations, by showing whether pollution levels have improved or worsened
-						compared to the recent past. When used alongside maps of absolute pollution values, it supports
-						a deeper trend analysis over time. Interpreting the results, positive values indicate that
-						pollution levels are higher than the five-year average, suggesting possible deterioration in air
+						compared to the recent past.
+						Interpreting the results, positive values indicate that pollution levels are higher than the
+						five-year average, suggesting possible deterioration in air
 						quality or exceptional circumstances such as wildfires or increased traffic. Conversely,
 						negative values indicate lower pollution compared to the average, pointing to improvements or
 						temporary reductions often linked to factors like lockdowns or favorable weather conditions. For
@@ -237,10 +231,9 @@
 
 				<p>
 					Overall, the analysis shows a clear improvement in NO₂ concentrations across most of France, likely
-					reflecting the impact of reduced traffic emissions or environmental regulations. In contrast, PM2.5
-					levels have increased in several regions, especially in the southeast, suggesting possible worsening
-					air quality due to factors like residential heating, industrial activity, or unfavorable weather
-					conditions. PM10 concentrations remain relatively stable, with minor increases in some areas. These
+					reflecting the impact of reduced traffic emissions or environmental regulations. In contrast, PM 2.5
+					levels have increased in several regions, especially in the southeast, and  PM10 concentrations show
+					minor increases in most of the areas. These
 					patterns highlight the importance of continuous monitoring and targeted air quality policies.
 				</p>
 			</section>
