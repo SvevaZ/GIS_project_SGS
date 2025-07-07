@@ -1,0 +1,172 @@
+#map {
+    width: 100%;
+    height: 100%;
+}
+
+.floating-button {
+    position: absolute;
+    z-index: 999;
+    left: 50px;
+    top: 10px;
+
+}
+
+.floating-button {
+    position: absolute;
+    top: 10px;
+    left: 50px;
+    z-index: 999;
+}   
+
+/* STYLE BELOW COPIED FROM PAGES BUTTONS, TO SEE HOW TO MERGE WITH WEBGIS BUTTON */
+/*.floating-button {
+       	-webkit-appearance: none;
+		-ms-appearance: none;
+		appearance: none;
+		-moz-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+		-webkit-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+		-ms-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+		transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+		background-color: transparent;
+		border-radius: 4px;
+		border: 0;
+		box-shadow: inset 0 0 0 1px rgba(144, 144, 144, 0.5);
+		color: #555 !important;
+		cursor: pointer;
+		display: inline-block;
+		font-size: 0.9em;
+		font-weight: 400;
+		height: 2.75em;
+		letter-spacing: 0.125em;
+		line-height: 2.75em;
+		padding: 0 2em;
+		text-align: center;
+		text-decoration: none;
+		text-indent: 0.125em;
+		text-transform: uppercase;
+		white-space: nowrap;
+	} */
+
+
+.wrapper.style2 {
+    /* This is an example of how to change colors in the template */
+    background-color: #3d7e53;
+}
+
+.banner-transparency {
+    opacity: 0.2;
+    background-color: #fff;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+}
+
+.custom-banner {
+    /*Change the background image here*/
+    background-image: url('../../images/background-index.jpg') !important;
+    background-size: cover !important;
+
+    /* Original background, for reference
+    background-attachment: scroll, scroll, scroll, fixed;
+    background-color: #645862;
+    background-image: url("images/light-bl.svg"), url("images/light-br.svg"), url("images/overlay.png"), url("../../images/banner.jpg");
+    background-position: bottom left, bottom right, top left, top center;
+    background-repeat: no-repeat, no-repeat, repeat, no-repeat;
+    background-size: 25em, 25em, auto, cover;
+    */
+
+    width: 100%;
+    height: 100%;
+}
+
+/*Popup Styles*/
+.ol-popup {
+    position: absolute;
+    background-color: white;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+    padding: 15px;
+    border-radius: 10px;
+    border: 1px solid #cccccc;
+    bottom: 12px;
+    left: -50px;
+    min-width: 280px;
+}
+
+.ol-popup:after,
+.ol-popup:before {
+    top: 100%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+}
+
+.ol-popup:after {
+    border-top-color: white;
+    border-width: 10px;
+    left: 48px;
+    margin-left: -10px;
+}
+
+.ol-popup:before {
+    border-top-color: #cccccc;
+    border-width: 11px;
+    left: 48px;
+    margin-left: -11px;
+}
+
+.ol-popup-closer {
+    text-decoration: none;
+    position: absolute;
+    top: 2px;
+    right: 8px;
+}
+
+.ol-popup-closer:after {}
+
+.legend-container{
+    position: absolute;
+    z-index: 9999;
+    background-color: rgba(255, 255, 255, 0.8);
+    left: 10px;
+    bottom: 40px;
+    width: 300px;
+    border: 2px solid white;
+    border-radius: 15px;
+}
+
+
+.legend-content ul{
+    list-style: none;
+}
+
+
+.legend-color {
+    width: 10px;
+    height: 10px;
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.legend-title{
+    font-size: 20px;
+    text-align: left;
+    left: 5px;
+    padding: 5px 10px 2px 10px;
+    display: block;
+}
+
+/*Add your new styles after this line*/
+.custom-control {
+    bottom: 30px;
+    position: absolute;
+    right: 15px;
+    background: white;
+    border: 2px solid rgb(155, 202, 169);
+    padding: 10px;
+}
