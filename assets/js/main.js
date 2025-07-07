@@ -5,7 +5,6 @@
 */
 import '../css/main.css';
 
-
 (function($) {
 
 	var	$window = $(window),
