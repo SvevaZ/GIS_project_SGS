@@ -113,8 +113,6 @@ export default {
     // Configurazioni per il CSS
     cssCodeSplit: false, // Metti tutti i CSS in un unico file se preferisci
     
-    // Minificazione
-    minify: 'terser',
     
     // Source maps per debug (rimuovi in produzione se non necessario)
     sourcemap: false
