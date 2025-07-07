@@ -19,6 +19,23 @@
 .nav-right a {
   margin: 0 0.5rem;
 }
+
+.nav-split {
+display: flex;
+justify-content: space-between;
+align-items: center;
+z-index: 3; /* più alto del before */
+position: relative;
+margin: 0 2rem
+}
+
+.center-cols {
+  display: flex;
+  justify-content: center;
+  gap: 2rem; /* opzionale, per distanziare le colonne */
+  flex-wrap: wrap;
+}
+
 /*loro*/
 
 html, body, div, span, applet, object,
@@ -37,11 +54,13 @@ section, summary, time, mark, audio, video {
 	border: 0;
 	font-size: 100%;
 	font: inherit;
-	vertical-align: baseline;}
+	vertical-align: baseline;
+}
 
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
-	display: block;}
+	display: block;
+}
 
 body {
 	line-height: 1;
@@ -112,7 +131,7 @@ input, select, textarea {
 		}
 
 	body, input, select, textarea {
-		color: #666;
+		color:#000000;
 		font-family: "Source Sans Pro", Helvetica, sans-serif;
 		font-size: 16pt;
 		font-weight: 300;
@@ -135,7 +154,7 @@ input, select, textarea {
 		}
 
 	strong, b {
-		color: #555;
+		color:#000000;
 		font-weight: 400;
 	}
 
@@ -145,10 +164,11 @@ input, select, textarea {
 
 	p {
 		margin: 0 0 2em 0;
+		color:#000000;	
 	}
 
 	h1, h2, h3, h4, h5, h6 {
-		color: #555;
+		color:#000000;
 		line-height: 1em;
 		margin: 0 0 1em 0;
 	}
@@ -2022,7 +2042,7 @@ input, select, textarea {
 	}
 
 	header p {
-		color: #999;
+		color:#000000;
 		margin: 0 0 1.5em 0;
 		position: relative;
 	}
@@ -2060,7 +2080,7 @@ input, select, textarea {
 			width: 6em;
 		}
 
-		header.major h2, header.major h3, header.major h4, header.major h5, header.major h6 {
+		header.major h1, header.major h2, header.major h3, header.major h4, header.major h5, header.major h6 {
 			margin: 0;
 		}
 
@@ -2174,7 +2194,7 @@ input, select, textarea {
 		input[type="checkbox"] + label,
 		input[type="radio"] + label {
 			text-decoration: none;
-			color: #666;
+			color:#000000;
 			cursor: pointer;
 			display: inline-block;
 			font-size: 1em;
@@ -2217,8 +2237,8 @@ input, select, textarea {
 
 		input[type="checkbox"]:checked + label:before,
 		input[type="radio"]:checked + label:before {
-			background: #666666;
-			border-color: #666666;
+			background: #000000;
+			border-color: #000000;
 			color: #ffffff;
 			content: '\f00c';
 		}
@@ -2237,22 +2257,22 @@ input, select, textarea {
 	}
 
 	::-webkit-input-placeholder {
-		color: #999 !important;
+		color:#000000 !important;
 		opacity: 1.0;
 	}
 
 	:-moz-placeholder {
-		color: #999 !important;
+		color:#000000 !important;
 		opacity: 1.0;
 	}
 
 	::-moz-placeholder {
-		color: #999 !important;
+		color:#000000 !important;
 		opacity: 1.0;
 	}
 
 	:-ms-input-placeholder {
-		color: #999 !important;
+		color:#000000 !important;
 		opacity: 1.0;
 	}
 
@@ -2928,7 +2948,7 @@ input, select, textarea {
 
 	#header {
 		padding: 2rem 1rem 2rem 1rem ;
-		height: 100px;
+		height: 110px;
 		background-color: #4686a0;
 		/*color: rgba(255, 255, 255, 0.75);*/
 		background-attachment: fixed,							fixed,							fixed;
@@ -3067,7 +3087,7 @@ input, select, textarea {
 			transform: scale(1);
 			opacity: 1;
 			position: relative;
-			z-index: 1;
+			z-index: 2;
 		}
 
 			#header .inner .actions {
@@ -3101,6 +3121,17 @@ input, select, textarea {
 			width: 100%;
 		}
 
+		#header::before {
+			content: "";
+			position: absolute;
+			top: 0; left: 0; right: 0; bottom: 0;
+			background: inherit;
+			z-index: 1;
+			pointer-events: none;
+			}
+
+
+
 	body.is-preload #header .inner {
 		-moz-transform: scale(1.05);
 		-webkit-transform: scale(1.05);
@@ -3124,7 +3155,7 @@ input, select, textarea {
 /* Footer */
 
 	#footer {
-		padding: 6em 0 6em 0 ;
+		padding: 2em 0 2em 0 ;
 		background-color: #4686a0;
 		color: rgba(255, 255, 255, 0.75);
 		background-attachment: fixed,							fixed,							fixed;
